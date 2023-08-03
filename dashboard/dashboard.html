@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Étudiant</th>
+                <th>Diplôme</th>
+                <th>Note</th>
+                <th>Note sur 10</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                <tr>
+                    <td>{{ item.etudiant.nom }}</td>
+                    <td>{{ item.question.diplome }}</td>
+                    <td>{{ item.note }}</td>
+                    <td>{{ item.note_sur_10 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
